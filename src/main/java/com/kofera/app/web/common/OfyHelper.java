@@ -23,6 +23,7 @@ import com.example.guestbook.Greeting;
 import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
+import com.kofera.app.web.entities.KoferaFeature;
 import com.kofera.app.web.entities.KoferaRole;
 
 /**
@@ -37,6 +38,7 @@ public class OfyHelper implements ServletContextListener {
     ObjectifyService.register(Greeting.class);
     ObjectifyService.register(KoferaAccount.class);
     ObjectifyService.register(KoferaRole.class);
+    ObjectifyService.register(KoferaFeature.class);
   }
 
   public void contextDestroyed(ServletContextEvent event) {
