@@ -16,11 +16,9 @@ import com.googlecode.objectify.annotation.Index;
  * @version 1.0
  */
 @Entity
-public class KoferaAccount {
-	@Id Long id;
+public class KoferaAccount extends KoferaModel{
 	@Index String email;
 	String password;
-	Date createdAt;
 	String activationToken;
 	boolean activationStatus;
 	Date activationAt;
@@ -34,19 +32,12 @@ public class KoferaAccount {
 	String country;
 	String postalCode;
 	String phone;
-
-	 /**
-	   * Simple constructor just sets the date
-	   **/
-	 public KoferaAccount() {
-		 createdAt = new Date();
-	 }
 	 
 	 /**
 	  * A convenience constructor
 	  */
 	 public KoferaAccount(String email, String password) {
-		 this();
+		 super();
 		 this.email = email;
 		 this.password = password;
 	 }
@@ -55,7 +46,7 @@ public class KoferaAccount {
 	  * Takes all important fields
 	  */
 	 public KoferaAccount(String email, String password, String firstName, String lastName) {
-		 this();
+		 super();
 		 this.email = email;
 		 this.password = password;
 		 this.firstName = firstName;
@@ -88,20 +79,6 @@ public class KoferaAccount {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	/**
-	 * @return the createdAt
-	 */
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	/**
-	 * @param createdAt the createdAt to set
-	 */
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
 	}
 
 	/**
@@ -284,13 +261,6 @@ public class KoferaAccount {
 	 */
 	public void setPhone(String phone) {
 		this.phone = phone;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
 	}
 
 	/* (non-Javadoc)
