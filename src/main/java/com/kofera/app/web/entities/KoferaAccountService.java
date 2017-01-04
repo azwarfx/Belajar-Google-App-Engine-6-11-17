@@ -16,38 +16,38 @@ import com.googlecode.objectify.annotation.Parent;
 @Entity
 public class KoferaAccountService extends KoferaModel{
 	
-	@Parent Key<KoferaAccount> kofera_id;
-	@Parent Key<KoferaService> service_id;
+	@Parent Key<KoferaAccount> koferaId;
+	@Parent Key<KoferaService> serviceId;
 
 	/**
 	 * A convenience constructor
 	 */
-	public KoferaAccountService(Long kofera_id, Long service_id) {
+	public KoferaAccountService(Long koferaId, Long serviceId) {
 		super();
-		this.kofera_id = Key.create(KoferaAccount.class, kofera_id);
-		this.service_id = Key.create(KoferaService.class, service_id);
+		this.koferaId = Key.create(KoferaAccount.class, koferaId);
+		this.serviceId = Key.create(KoferaService.class, serviceId);
 	}
 
 	/**
 	 * @return kofera_id
 	 */
-	public Key<KoferaAccount> getKofera_id() {
-		return kofera_id;
+	public Key<KoferaAccount> getKoferaId() {
+		return koferaId;
 	}
 
 	/**
 	 * @return service_id
 	 */
-	public Key<KoferaService> getService_id() {
-		return service_id;
+	public Key<KoferaService> getServiceId() {
+		return serviceId;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("{id: ").append(id).append(", created: ").append(createdAt)
-		.append(", kofera_id:").append(kofera_id).append(", service_id: ")
-		.append(service_id).append("}");
+		.append(", koferaId:").append(koferaId).append(", serviceId: ")
+		.append(serviceId).append("}");
 		return builder.toString();
 	}
 }
