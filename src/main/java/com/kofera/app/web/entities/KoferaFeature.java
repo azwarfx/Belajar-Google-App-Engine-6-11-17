@@ -34,7 +34,7 @@ public class KoferaFeature {
 	@Id Long id;
 	String name;
 	
-	public KoferaFeature(){
+	public KoferaFeature(String name){
 		super();
 		this.name = name;
 	}
