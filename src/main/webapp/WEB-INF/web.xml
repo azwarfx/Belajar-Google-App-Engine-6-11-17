@@ -29,6 +29,14 @@
       <url-pattern>/koferarole</url-pattern>
   </servlet-mapping>
   <servlet>
+      <servlet-name>KoferaFeature</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaFeatureTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaFeature</servlet-name>
+      <url-pattern>/koferafeature</url-pattern>
+  </servlet-mapping>
+  <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
 	</servlet>
