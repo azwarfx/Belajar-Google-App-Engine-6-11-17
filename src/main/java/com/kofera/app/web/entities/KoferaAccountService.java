@@ -17,7 +17,7 @@ import com.googlecode.objectify.annotation.Parent;
 public class KoferaAccountService extends KoferaModel{
 	
 	@Parent Key<KoferaAccount> koferaId;
-	@Parent Key<KoferaService> serviceId;
+	Key<KoferaService> serviceId;
 
 	/**
 	 * A convenience constructor
