@@ -13,6 +13,14 @@
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   <servlet>
+      <servlet-name>KoferaAccount</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccount</servlet-name>
+      <url-pattern>/koferaaccount</url-pattern>
+  </servlet-mapping>
+  <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
 	</servlet>
