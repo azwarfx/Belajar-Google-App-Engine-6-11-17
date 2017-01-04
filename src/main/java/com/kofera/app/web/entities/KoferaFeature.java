@@ -30,8 +30,7 @@ import com.googlecode.objectify.annotation.Id;
  */
 
 @Entity
-public class KoferaFeature {
-	@Id Long id;
+public class KoferaFeature extends KoferaModel{
 	String name;
 	
 	public KoferaFeature(String name){
@@ -51,13 +50,6 @@ public class KoferaFeature {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
 	}
 
 	/* (non-Javadoc)
