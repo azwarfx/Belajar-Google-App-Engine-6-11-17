@@ -78,6 +78,7 @@
     <build>
         <!-- for hot reload of the web application-->
         <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+
          <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -145,5 +146,6 @@
               </configuration>
             </plugin>
         </plugins>
+
     </build>
 </project>
