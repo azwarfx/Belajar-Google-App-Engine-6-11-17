@@ -24,6 +24,7 @@ import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
 import com.kofera.app.web.entities.KoferaRole;
+import com.kofera.app.web.entities.KoferaService;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP is run.  This is
@@ -37,6 +38,7 @@ public class OfyHelper implements ServletContextListener {
     ObjectifyService.register(Greeting.class);
     ObjectifyService.register(KoferaAccount.class);
     ObjectifyService.register(KoferaRole.class);
+    ObjectifyService.register(KoferaService.class);
   }
 
   public void contextDestroyed(ServletContextEvent event) {
