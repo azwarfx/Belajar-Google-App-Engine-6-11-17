@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 //[START all]
-package com.example.guestbook;
+package com.kofera.app.web.common;
 
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyFactory;
-import com.googlecode.objectify.ObjectifyService;
-
-import javax.servlet.ServletContextListener;
 import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import com.example.guestbook.Greeting;
+import com.example.guestbook.Guestbook;
+import com.googlecode.objectify.ObjectifyService;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP is run.  This is
