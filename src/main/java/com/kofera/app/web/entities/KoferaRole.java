@@ -21,23 +21,14 @@ import com.googlecode.objectify.annotation.Id;
  * @author zulfikar@kofera.com
  */
 @Entity
-public class KoferaRole {
-	@Id Long id;
+public class KoferaRole extends KoferaModel {
 	String name;
-	Date createdAt;
-	
-	/**
-	 * Simple constructor just sets the date
-	 **/
-	public KoferaRole() {
-		createdAt = new Date();
-	}
 	
 	/**
 	 * Convenience contructor
 	 */
 	public KoferaRole(String name) {
-		this();
+		super();
 		this.name = name;
 	}
 
@@ -53,27 +44,6 @@ public class KoferaRole {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	/**
-	 * @return the createdAt
-	 */
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	/**
-	 * @param createdAt the createdAt to set
-	 */
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
 	}
 
 	/* (non-Javadoc)
