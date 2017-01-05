@@ -96,6 +96,14 @@
       <url-pattern>/koferaaccountrole</url-pattern>
   </servlet-mapping>
   <servlet>
+      <servlet-name>KoferaAuthFacebook</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAuthFacebookTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAuthFacebook</servlet-name>
+      <url-pattern>/koferaauthfacebook</url-pattern>
+  </servlet-mapping>
+  <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
 	</servlet>
