@@ -1,9 +1,17 @@
+/**
+ * Copyright 2017 Kofera Technology Inc. All Rights Reserved.
+ */
 package com.kofera.app.web.entities;
 
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
-
+/**
+ * This @Entity for kofera feature permission
+ * 
+ * @author azwar@kofera.com
+ * @version 1.0
+ */
 @Entity
 public class KoferaFeaturePermission extends KoferaModel{
 	//String name;
