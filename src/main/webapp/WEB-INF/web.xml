@@ -69,6 +69,14 @@
   </servlet-mapping>
   
   <servlet>
+      <servlet-name>KoferaAuthGoogleAdwords</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAuthGoogleAdwordsTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAuthGoogleAdwords</servlet-name>
+      <url-pattern>/koferaauthgoogleadwords</url-pattern>
+  </servlet-mapping>
+  <servlet>
       <servlet-name>KoferaAccountSubscription</servlet-name>
       <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountSubscriptionTestServlet</servlet-class>
   </servlet>
