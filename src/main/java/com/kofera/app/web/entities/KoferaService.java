@@ -3,6 +3,9 @@
  */
 package com.kofera.app.web.entities;
 
+import java.beans.Transient;
+
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 
 /**
@@ -30,7 +33,22 @@ public class KoferaService extends KoferaModel{
 		super();
 		this.name = name;
 	}
+	
+	/**
+	 * Full constructor
+	 */
+	public KoferaService(Long id, String name){
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
+	
+	@Transient
+	public Key<KoferaService> getKey() {
+	   return Key.create(KoferaService.class, id);
+	}
+	
 	/**
 	 * @return the name
 	 */
@@ -45,7 +63,7 @@ public class KoferaService extends KoferaModel{
 		this.name = name;
 	}
 	
-
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -53,7 +71,7 @@ public class KoferaService extends KoferaModel{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("{id: ").append(id).append(", name: ").append(name).append(", createdAt: ").append(createdAt)
-				.append("}");
+		.append(", updateAt: ").append(updatedAt).append("}");
 		return builder.toString();
 	}
 }

@@ -1,3 +1,6 @@
+/**
+ * Copyright 2017 Kofera Technology Inc. All Rights Reserved.
+ */
 package com.kofera.app.web.controllers.test;
 
 import java.io.IOException;
@@ -13,6 +16,12 @@ import com.googlecode.objectify.Result;
 import com.kofera.app.web.entities.KoferaAccount;
 import com.kofera.app.web.entities.KoferaService;
 
+/**
+ * This servlet for testing entity kofera service
+ * 
+ * @author agung@wirehub.co.id
+ * @version 1.0
+ */
 public class KoferaServiceTestServlet extends HttpServlet{
 	  
 	@Override

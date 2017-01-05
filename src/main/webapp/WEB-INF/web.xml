@@ -87,6 +87,15 @@
       <servlet-name>KoferaAccountRole</servlet-name>
       <url-pattern>/koferaaccountrole</url-pattern>
   </servlet-mapping>
+    <servlet>
+      <servlet-name>KoferaAccountPayment</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountPaymentTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountPayment</servlet-name>
+      <url-pattern>/koferaaccountpayment</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>

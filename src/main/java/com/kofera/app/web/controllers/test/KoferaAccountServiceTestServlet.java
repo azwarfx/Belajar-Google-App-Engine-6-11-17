@@ -1,3 +1,6 @@
+/**
+ * Copyright 2017 Kofera Technology Inc. All Rights Reserved.
+ */
 package com.kofera.app.web.controllers.test;
 
 import java.io.IOException;
@@ -11,37 +14,41 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Result;
 import com.kofera.app.web.entities.KoferaAccount;
+import com.kofera.app.web.entities.KoferaAccountRole;
 import com.kofera.app.web.entities.KoferaAccountService;
+import com.kofera.app.web.entities.KoferaService;
 import com.kofera.app.web.entities.KoferaAccountService;
 
-public class KoferaAccountServiceTestServlet extends HttpServlet{
-	
+/**
+ * This servlet for testing entity kofera account service
+ * 
+ * @author agung@wirehub.co.id
+ * @version 1.0
+ */
+public class KoferaAccountServiceTestServlet extends HttpServlet {
+
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		resp.setContentType("text/plain");
+		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
-		out.println("test for Entity koferaAccountService");
+		out.println("<html><head><title>kofera account service</title></head><body>");
 
-		KoferaAccountService accountService = new KoferaAccountService(10000L, 30000L);
-		// save
-		ObjectifyService.ofy().save().entity(accountService).now(); // async without
-																// the now()
+		// prepare kofera account
+		KoferaAccount account = new KoferaAccount("agung@wirehub.co.id", "rikawatanabe", "Agung", "Nurdiyanto");
+		ObjectifyService.ofy().save().entity(account).now(); // async without the now()
 
-		if (accountService.getId() != null) {
-			out.println("kofera account service has saved:");
-			out.println(accountService.toString());
-		}
+		out.println("<h3>Kofera Account</h3>");
+		out.println("<p>" + account.toString() + "</p>");
 
-		// Get it back
-		Result<KoferaAccountService> result = ObjectifyService.ofy().load()
-				.key(Key.create(KoferaAccountService.class, accountService.getId())); // Result
-																		// is
-																		// async
-		KoferaAccountService fetched1 = result.now(); // Materialize the async value
+		KoferaService service = new KoferaService("e-commerce");
+		ObjectifyService.ofy().save().entity(service).now(); // async without the now()
+		out.println("<h3>Kofera Service</h3>");
+		out.println("<p>" + service.toString() + "</p>");
 
-		if (fetched1 != null) {
-			out.println("<p>get it back:<br/>");
-			out.println(accountService.toString());
-		}
+		KoferaAccountService accountService = new KoferaAccountService(account.getKey(), service.getKey());
+		ObjectifyService.ofy().save().entity(accountService).now(); // async without the now()
+		out.println("<h3>Kofera Account Role</h3>");
+		out.println("<p>" + accountService.toString() + "</p>");
+		out.println("</body></html>");
 	}
 }
