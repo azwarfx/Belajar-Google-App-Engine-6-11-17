@@ -15,5 +15,5 @@
 <setAttribute key="org.eclipse.debug.core.LAUNCH_MODES">
 <setEntry value="run"/>
 </setAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:/kofera.com}"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${project_loc}"/>
 </launchConfiguration>

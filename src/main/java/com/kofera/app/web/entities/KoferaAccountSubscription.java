@@ -121,13 +121,11 @@ public class KoferaAccountSubscription extends KoferaModel{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("{koferaId: ").append(koferaId).append(", subscriptionId: ")
-				.append(subscriptionId).append(", packageId: ").append(packageId).append(", subscribeAt: ")
-				.append(subscribeAt).append(", expiredAt: ").append(expiredAt).append(", additionalPrice: ")
-				.append(additionalPrice).append(", additionalLimitSpending: ").append(additionalLimitSpending)
-				.append("}");
+		builder.append("{id: ").append(id).append(", created: ").append(createdAt)
+				.append(", koferaId: ").append(koferaId).append(", subscriptionId: ").append(subscriptionId)
+				.append(", packageId: ").append(packageId).append(", subscribeAt: ").append(subscribeAt)
+				.append(", expiredAt: ").append(expiredAt).append(", additionalPrice: ").append(additionalPrice)
+				.append(", additionalLimitSpending: ").append(additionalLimitSpending).append("}");
 		return builder.toString();
 	}
-	
-	
 }

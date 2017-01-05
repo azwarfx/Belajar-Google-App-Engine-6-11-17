@@ -51,7 +51,8 @@ public class KoferaSubscription extends KoferaModel{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("{id : ").append(id).append(", name: ").append(name).append("}");
+		builder.append("{id : ").append(id).append(", createdAt: ").append(createdAt)
+				.append(", name: ").append(name).append("}");
 		return builder.toString();
 	}
 

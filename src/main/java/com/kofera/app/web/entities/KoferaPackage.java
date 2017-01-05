@@ -82,7 +82,8 @@ public class KoferaPackage extends KoferaModel{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("{id: ").append(id).append(", name: ").append(name).append(", price: ")
+		builder.append("{id: ").append(id).append(", createdAt: ").append(createdAt)
+				.append(", name: ").append(name).append(", price: ")
 				.append(price).append(", limitSpending: ").append(limitSpending).append("}");
 		return builder.toString();
 	}

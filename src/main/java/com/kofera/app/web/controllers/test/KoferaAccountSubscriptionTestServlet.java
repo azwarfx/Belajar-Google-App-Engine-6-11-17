@@ -1,7 +1,9 @@
 package com.kofera.app.web.controllers.test;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,7 +12,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Result;
 import com.kofera.app.web.entities.KoferaAccountSubscription;
 
-public class KoferaAccountSubscriptionTestServlet {
+public class KoferaAccountSubscriptionTestServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException{
@@ -29,7 +31,7 @@ public class KoferaAccountSubscriptionTestServlet {
 		
 		// get it back
 		Result<KoferaAccountSubscription> result = ObjectifyService.ofy().load()
-				.key(Key.create(KoferaAccountSubscription.class, accountSubscription.getKoferaId())); // Result
+				.key(Key.create(KoferaAccountSubscription.class, accountSubscription.getId())); // Result
 		
 		KoferaAccountSubscription fetched1 = result.now(); // Materialize the async value
 		

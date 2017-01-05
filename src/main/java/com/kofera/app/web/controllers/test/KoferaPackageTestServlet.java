@@ -1,7 +1,9 @@
 package com.kofera.app.web.controllers.test;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,10 +12,10 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Result;
 import com.kofera.app.web.entities.KoferaPackage;
 
-public class KoferaPackageTestServlet {
+public class KoferaPackageTestServlet extends HttpServlet{
 
 	@Override
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
 		PrintWriter out = resp.getWriter();
 		out.println("test for Entity kofera package");

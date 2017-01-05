@@ -21,6 +21,65 @@
       <url-pattern>/koferaaccount</url-pattern>
   </servlet-mapping>
   <servlet>
+      <servlet-name>KoferaRole</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaRoleTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaRole</servlet-name>
+      <url-pattern>/koferarole</url-pattern>
+  </servlet-mapping>
+   <servlet>
+      <servlet-name>KoferaService</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaServiceTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaService</servlet-name>
+      <url-pattern>/koferaservice</url-pattern>
+  </servlet-mapping>
+     <servlet>
+      <servlet-name>KoferaAccountService</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountServiceTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountService</servlet-name>
+      <url-pattern>/koferaaccountservice</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>KoferaFeature</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaFeatureTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaFeature</servlet-name>
+      <url-pattern>/koferafeature</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>KoferaAccountSubscription</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountSubscriptionTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountSubscription</servlet-name>
+      <url-pattern>/koferaaccountsubscription</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      <servlet-name>KoferaPackage</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaPackageTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaPackage</servlet-name>
+      <url-pattern>/koferapackage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      <servlet-name>KoferaSubscription</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaSubscriptionTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaSubscription</servlet-name>
+      <url-pattern>/koferasubscription</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
 	</servlet>
