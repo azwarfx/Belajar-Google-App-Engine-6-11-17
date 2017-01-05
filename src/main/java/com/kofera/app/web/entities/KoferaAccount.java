@@ -3,8 +3,10 @@
  */
 package com.kofera.app.web.entities;
 
+import java.beans.Transient;
 import java.util.Date;
 
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Index;
 
@@ -51,7 +53,15 @@ public class KoferaAccount extends KoferaModel{
 		 this.firstName = firstName;
 		 this.lastName = lastName;
 	 }
-
+	
+	/**
+	 * get key
+	 */
+	@Transient
+	public Key<KoferaAccount> getKey() {
+	   return Key.create(KoferaAccount.class, id);
+	}
+	 
 	/**
 	 * @return the email
 	 */
