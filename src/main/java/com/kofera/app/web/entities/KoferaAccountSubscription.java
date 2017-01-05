@@ -37,7 +37,7 @@ public class KoferaAccountSubscription extends KoferaModel{
 	/**
 	 * A convenience constructor
 	 **/
-	public KoferaAccountSubscription(Long koferaId, Integer subscriptionId, Integer packageId) {
+	public KoferaAccountSubscription(Long koferaId, Long subscriptionId, Long packageId) {
 		this();
 		this.koferaId = Key.create(KoferaAccount.class, koferaId);
 		this.subscriptionId = Key.create(KoferaSubscription.class, subscriptionId);
@@ -52,6 +52,13 @@ public class KoferaAccountSubscription extends KoferaModel{
 	}
 	
 	/**
+	 * @param koferaId the koferaId to set
+	 */
+	public void setKoferaId(Key<KoferaAccount> koferaId) {
+		this.koferaId = koferaId;
+	}
+	
+	/**
 	 * @return subscriptionId
 	 */
 	public Key<KoferaSubscription> getSubscriptionId() {
@@ -59,10 +66,24 @@ public class KoferaAccountSubscription extends KoferaModel{
 	}
 	
 	/**
+	 * @param subscriptionId the subscriptionId to set
+	 */
+	public void setSubscriptionId(Key<KoferaSubscription> subscriptionId) {
+		this.subscriptionId = subscriptionId;
+	}
+	
+	/**
 	 * @return packageId
 	 */
 	public Key<KoferaPackage> getPackageId() {
 		return packageId;
+	}
+	
+	/**
+	 * @param packageId the packageId to set
+	 */
+	public void setPackageId(Key<KoferaPackage> packageId) {
+		this.packageId = packageId;
 	}
 	
 	/**

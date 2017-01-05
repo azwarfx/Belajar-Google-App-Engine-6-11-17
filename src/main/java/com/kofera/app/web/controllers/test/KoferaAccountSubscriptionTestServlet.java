@@ -20,7 +20,7 @@ public class KoferaAccountSubscriptionTestServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.println("test for Entity KoferaAccountSubscription");
 		
-		KoferaAccountSubscription accountSubscription = new KoferaAccountSubscription(12345L, 67890, 13579);
+		KoferaAccountSubscription accountSubscription = new KoferaAccountSubscription(12345L, 67890L, 13579L);
 		// save
 		ObjectifyService.ofy().save().entity(accountSubscription).now(); 
 		
