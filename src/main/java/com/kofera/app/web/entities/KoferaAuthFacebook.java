@@ -29,14 +29,14 @@ public class KoferaAuthFacebook {
 	Date createdAt;
 	Date updatedAt;
 
-	public KoferaAuthFacebook(Long accountId, Key<KoferaAccount> koferaId, String refreshToken, String accessToken,
+	public KoferaAuthFacebook(Long accountId, Long koferaId, String refreshToken, String accessToken,
 			Date createdAt) {
 		super();
 		this.accountId = accountId;
-		this.koferaId = koferaId;
+		this.koferaId = Key.create(KoferaAccount.class, koferaId);
 		this.refreshToken = refreshToken;
 		this.accessToken = accessToken;
-		this.createdAt = createdAt;
+		this.createdAt = new Date();
 	}
 
 	/**
