@@ -113,9 +113,7 @@ public class KoferaAuthFacebook {
 		return updatedAt;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
+	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -129,8 +127,32 @@ public class KoferaAuthFacebook {
 		builder.append(refreshToken);
 		builder.append(", accessToken=");
 		builder.append(accessToken);
+		builder.append(", createdAt=");
+		builder.append(createdAt);
 		builder.append("}");
 		return builder.toString();
 	}
+
+//	/*
+//	 * (non-Javadoc)
+//	 * 
+//	 * @see java.lang.Object#toString()
+//	 */
+//	@Override
+//	public String toString() {
+//		StringBuilder builder = new StringBuilder();
+//		builder.append("{accountId=");
+//		builder.append(accountId);
+//		builder.append(", koferaId=");
+//		builder.append(koferaId);
+//		builder.append(", refreshToken=");
+//		builder.append(refreshToken);
+//		builder.append(", accessToken=");
+//		builder.append(accessToken);
+//		builder.append("}");
+//		return builder.toString();
+//	}
+	
+	
 
 }
