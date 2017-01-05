@@ -49,7 +49,7 @@ public abstract class KoferaModel {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-
+		
 	/**
 	 * @return the id
 	 */
@@ -57,4 +57,10 @@ public abstract class KoferaModel {
 		return id;
 	}
 	
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
 }

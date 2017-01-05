@@ -24,25 +24,29 @@ import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
 import com.kofera.app.web.entities.KoferaAccountRole;
+import com.kofera.app.web.entities.KoferaFeature;
 import com.kofera.app.web.entities.KoferaRole;
+import com.kofera.app.web.entities.KoferaService;
 
 /**
- * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP is run.  This is
- * required to let JSP's access Ofy.
+ * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP
+ * is run. This is required to let JSP's access Ofy.
  **/
 public class OfyHelper implements ServletContextListener {
-  public void contextInitialized(ServletContextEvent event) {
-    // This will be invoked as part of a warmup request, or the first user request if no warmup
-    // request.
-    ObjectifyService.register(Guestbook.class);
-    ObjectifyService.register(Greeting.class);
-    ObjectifyService.register(KoferaAccount.class);
-    ObjectifyService.register(KoferaRole.class);
-    ObjectifyService.register(KoferaAccountRole.class);
-  }
+	public void contextInitialized(ServletContextEvent event) {
+	    // This will be invoked as part of a warmup request, or the first user request if no warmup
+		// request.
+	    ObjectifyService.register(Guestbook.class);
+	    ObjectifyService.register(Greeting.class);
+	    ObjectifyService.register(KoferaAccount.class);
+	    ObjectifyService.register(KoferaRole.class);
+	    ObjectifyService.register(KoferaAccountRole.class);
+		ObjectifyService.register(KoferaFeature.class);
+		ObjectifyService.register(KoferaService.class);
+	  }
 
-  public void contextDestroyed(ServletContextEvent event) {
-    // App Engine does not currently invoke this method.
-  }
+	public void contextDestroyed(ServletContextEvent event) {
+		// App Engine does not currently invoke this method.
+	}
 }
-//[END all]
+// [END all]

@@ -28,6 +28,31 @@
       <servlet-name>KoferaRole</servlet-name>
       <url-pattern>/koferarole</url-pattern>
   </servlet-mapping>
+   <servlet>
+      <servlet-name>KoferaService</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaServiceTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaService</servlet-name>
+      <url-pattern>/koferaservice</url-pattern>
+  </servlet-mapping>
+     <servlet>
+      <servlet-name>KoferaAccountService</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountServiceTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountService</servlet-name>
+      <url-pattern>/koferaaccountservice</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>KoferaFeature</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaFeatureTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaFeature</servlet-name>
+      <url-pattern>/koferafeature</url-pattern>
+  </servlet-mapping>
   <servlet>
       <servlet-name>KoferaAccountRole</servlet-name>
       <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountRoleTestServlet</servlet-class>
