@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Result;
-import com.kofera.app.web.entities.KoferaAccount;
 import com.kofera.app.web.entities.KoferaRole;
 
 /**
@@ -45,6 +44,6 @@ public class KoferaRoleTestServlet extends HttpServlet {
 		  if (fetched1 != null) {
 			  out.println("get it back:");
 				  out.println(role.toString());
-			  }
 		  }
+	 }
 }

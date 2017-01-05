@@ -3,10 +3,10 @@
  */
 package com.kofera.app.web.entities;
 
-import java.util.Date;
+import java.beans.Transient;
 
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 
 /**
  * <p>
@@ -19,6 +19,7 @@ import com.googlecode.objectify.annotation.Id;
  * 
  * This class for @Entity KoferaRole
  * @author zulfikar@kofera.com
+ * @version 1.0
  */
 @Entity
 public class KoferaRole extends KoferaModel {
@@ -31,7 +32,21 @@ public class KoferaRole extends KoferaModel {
 		super();
 		this.name = name;
 	}
+	
+	/**
+	 * full constructor
+	 */
+	public KoferaRole(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
+	@Transient
+	public Key<KoferaRole> getKey() {
+	   return Key.create(KoferaRole.class, id);
+	}
+	
 	/**
 	 * @return the name
 	 */
