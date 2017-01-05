@@ -36,6 +36,7 @@
       <servlet-name>KoferaService</servlet-name>
       <url-pattern>/koferaservice</url-pattern>
   </servlet-mapping>
+  
      <servlet>
       <servlet-name>KoferaAccountService</servlet-name>
       <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountServiceTestServlet</servlet-class>
@@ -52,6 +53,16 @@
   <servlet-mapping>
       <servlet-name>KoferaFeature</servlet-name>
       <url-pattern>/koferafeature</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+      <servlet-name>KoferaFeaturePermission</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaFeaturePermissionTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaFeaturePermission</servlet-name>
+      <url-pattern>/koferafeaturepermission</url-pattern>
   </servlet-mapping>
   
   <servlet>

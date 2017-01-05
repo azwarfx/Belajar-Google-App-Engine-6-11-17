@@ -25,6 +25,8 @@ import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
 import com.kofera.app.web.entities.KoferaAccountRole;
 import com.kofera.app.web.entities.KoferaFeature;
+import com.kofera.app.web.entities.KoferaFeaturePermission;
+import com.kofera.app.web.entities.KoferaFeaturePermission;
 import com.kofera.app.web.entities.KoferaPackage;
 import com.kofera.app.web.entities.KoferaRole;
 import com.kofera.app.web.entities.KoferaService;
@@ -47,6 +49,7 @@ public class OfyHelper implements ServletContextListener {
 		ObjectifyService.register(KoferaService.class);
 		ObjectifyService.register(KoferaPackage.class);
 		ObjectifyService.register(KoferaSubscription.class);
+		ObjectifyService.register(KoferaFeaturePermission.class); 
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
