@@ -23,6 +23,7 @@ import com.example.guestbook.Greeting;
 import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
+import com.kofera.app.web.entities.KoferaAccountRole;
 import com.kofera.app.web.entities.KoferaFeature;
 import com.kofera.app.web.entities.KoferaPackage;
 import com.kofera.app.web.entities.KoferaRole;
@@ -35,13 +36,13 @@ import com.kofera.app.web.entities.KoferaSubscription;
  **/
 public class OfyHelper implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
-		// This will be invoked as part of a warmup request, or the first user
-		// request if no warmup
+	    // This will be invoked as part of a warmup request, or the first user request if no warmup
 		// request.
-		ObjectifyService.register(Guestbook.class);
-		ObjectifyService.register(Greeting.class);
-		ObjectifyService.register(KoferaAccount.class);
-		ObjectifyService.register(KoferaRole.class);
+	    ObjectifyService.register(Guestbook.class);
+	    ObjectifyService.register(Greeting.class);
+	    ObjectifyService.register(KoferaAccount.class);
+	    ObjectifyService.register(KoferaRole.class);
+	    ObjectifyService.register(KoferaAccountRole.class);
 		ObjectifyService.register(KoferaFeature.class);
 		ObjectifyService.register(KoferaService.class);
 		ObjectifyService.register(KoferaPackage.class);
