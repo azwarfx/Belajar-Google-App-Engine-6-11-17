@@ -23,10 +23,13 @@ import com.example.guestbook.Greeting;
 import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
+import com.kofera.app.web.entities.KoferaAuthFacebook;
 import com.kofera.app.web.entities.KoferaAccountRole;
 import com.kofera.app.web.entities.KoferaFeature;
+import com.kofera.app.web.entities.KoferaPackage;
 import com.kofera.app.web.entities.KoferaRole;
 import com.kofera.app.web.entities.KoferaService;
+import com.kofera.app.web.entities.KoferaSubscription;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP
@@ -43,7 +46,11 @@ public class OfyHelper implements ServletContextListener {
 	    ObjectifyService.register(KoferaAccountRole.class);
 		ObjectifyService.register(KoferaFeature.class);
 		ObjectifyService.register(KoferaService.class);
-	  }
+		ObjectifyService.register(KoferaAuthFacebook.class);
+		ObjectifyService.register(KoferaPackage.class);
+		ObjectifyService.register(KoferaSubscription.class);
+
+	}
 
 	public void contextDestroyed(ServletContextEvent event) {
 		// App Engine does not currently invoke this method.
