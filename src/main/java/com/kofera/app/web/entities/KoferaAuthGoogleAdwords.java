@@ -5,6 +5,7 @@ package com.kofera.app.web.entities;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Parent;
 
 /**
@@ -17,6 +18,8 @@ import com.googlecode.objectify.annotation.Parent;
 @Entity
 public class KoferaAuthGoogleAdwords extends KoferaModel {
 
+	@Index
+	Long accountId;
 	@Parent
 	Key<KoferaAccount> koferaId;
 	String refresh_token;
@@ -25,11 +28,28 @@ public class KoferaAuthGoogleAdwords extends KoferaModel {
 	/**
 	 * A convenience constructor
 	 */
-	public KoferaAuthGoogleAdwords(Long koferaId, String refresh_token, String access_token) {
+	public KoferaAuthGoogleAdwords(Long accountId, Long koferaId, String refresh_token, String access_token) {
 		super();
+		this.accountId = accountId;
 		this.koferaId = Key.create(KoferaAccount.class, koferaId);
 		this.refresh_token = refresh_token;
 		this.access_token = access_token;
+	}
+	
+	
+	/**
+	 * @return the accountId
+	 */
+	public Long getAccountId() {
+		return accountId;
+	}
+
+	/**
+	 * @param set
+	 *            accountId to this accountId
+	 */
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
 	}
 
 	/**
@@ -85,7 +105,7 @@ public class KoferaAuthGoogleAdwords extends KoferaModel {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("{id: ").append(id).append(", created: ").append(createdAt).append(", koferaId:")
+		builder.append("{accountId: ").append(accountId).append(", created: ").append(createdAt).append(", koferaId:")
 				.append(koferaId).append(", refresh_token: ").append(refresh_token).append(", access_token: ")
 				.append(access_token).append("}");
 		return builder.toString();

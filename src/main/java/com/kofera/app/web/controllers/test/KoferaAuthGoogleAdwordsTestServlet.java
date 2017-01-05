@@ -39,7 +39,7 @@ public class KoferaAuthGoogleAdwordsTestServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.println("test for @Entity KoferaAuthGoogleAdwords");
 
-		KoferaAuthGoogleAdwords adwords = new KoferaAuthGoogleAdwords(1000L, "123ABC", "456ASD");
+		KoferaAuthGoogleAdwords adwords = new KoferaAuthGoogleAdwords(1000L, 1000L, "123ABC", "456ASD");
 		// Save
 		ObjectifyService.ofy().save().entity(adwords).now();
 
