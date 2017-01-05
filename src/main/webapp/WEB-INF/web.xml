@@ -62,7 +62,39 @@
       <servlet-name>KoferaAuthGoogleAdwords</servlet-name>
       <url-pattern>/koferaauthgoogleadwords</url-pattern>
   </servlet-mapping>
+  <servlet>
+      <servlet-name>KoferaAccountSubscription</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountSubscriptionTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountSubscription</servlet-name>
+      <url-pattern>/koferaaccountsubscription</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      <servlet-name>KoferaPackage</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaPackageTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaPackage</servlet-name>
+      <url-pattern>/koferapackage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      <servlet-name>KoferaSubscription</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaSubscriptionTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaSubscription</servlet-name>
+      <url-pattern>/koferasubscription</url-pattern>
+  </servlet-mapping>
   
+  <servlet>
+      <servlet-name>KoferaAccountRole</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountRoleTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountRole</servlet-name>
+      <url-pattern>/koferaaccountrole</url-pattern>
+  </servlet-mapping>
   <servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>

@@ -14,4 +14,6 @@
 # Maven
 log/
 target/
-/bin/
+
+# Project
+bin/

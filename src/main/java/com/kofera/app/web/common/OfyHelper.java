@@ -23,10 +23,16 @@ import com.example.guestbook.Greeting;
 import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
+<<<<<<< HEAD
 import com.kofera.app.web.entities.KoferaAuthGoogleAdwords;
+=======
+import com.kofera.app.web.entities.KoferaAccountRole;
+>>>>>>> develop
 import com.kofera.app.web.entities.KoferaFeature;
+import com.kofera.app.web.entities.KoferaPackage;
 import com.kofera.app.web.entities.KoferaRole;
 import com.kofera.app.web.entities.KoferaService;
+import com.kofera.app.web.entities.KoferaSubscription;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP
@@ -34,17 +40,18 @@ import com.kofera.app.web.entities.KoferaService;
  **/
 public class OfyHelper implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
-		// This will be invoked as part of a warmup request, or the first user
-		// request if no warmup
+	    // This will be invoked as part of a warmup request, or the first user request if no warmup
 		// request.
-		ObjectifyService.register(Guestbook.class);
-		ObjectifyService.register(Greeting.class);
-		ObjectifyService.register(KoferaAccount.class);
-		ObjectifyService.register(KoferaRole.class);
+	    ObjectifyService.register(Guestbook.class);
+	    ObjectifyService.register(Greeting.class);
+	    ObjectifyService.register(KoferaAccount.class);
+	    ObjectifyService.register(KoferaRole.class);
+	    ObjectifyService.register(KoferaAccountRole.class);
 		ObjectifyService.register(KoferaFeature.class);
 		ObjectifyService.register(KoferaService.class);
 		ObjectifyService.register(KoferaAuthGoogleAdwords.class);
-
+		ObjectifyService.register(KoferaPackage.class);
+		ObjectifyService.register(KoferaSubscription.class);
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
