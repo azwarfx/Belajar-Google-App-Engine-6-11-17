@@ -22,7 +22,13 @@ public class KoferaAccountSubscription extends KoferaModel{
 	Key<KoferaPackage> packageId;
 	Date subscribeAt;
 	Date expiredAt;
+	/**
+	 * @param additionalPrice the additionalPrice value in microamount ex. USD 1.00 = 1000000
+	 */
 	Long additionalPrice;
+	/**
+	 * @param additionalLimitSpending the additionalLimitSpending value in microamount ex. USD 1.00 = 1000000
+	 */
 	Long additionalLimitSpending;
 	
 	public KoferaAccountSubscription() {

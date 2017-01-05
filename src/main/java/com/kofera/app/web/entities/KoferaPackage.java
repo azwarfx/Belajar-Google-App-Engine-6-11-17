@@ -4,8 +4,6 @@
 package com.kofera.app.web.entities;
 
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Index;
 
 /**
  * 1. Standard → $99 monthly (limit by monthly spending ~$15,000)
@@ -21,7 +19,14 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 public class KoferaPackage extends KoferaModel{
 	String name;
+	
+	/**
+	 * @param price the price value in microamount ex. USD 1.00 = 1000000
+	 */
 	Long price;
+	/**
+	 * @param limitSpending the limitSpending value in microamount ex. USD 1.00 = 1000000
+	 */
 	Long limitSpending;
 	
 	/**

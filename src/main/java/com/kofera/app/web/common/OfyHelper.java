@@ -46,7 +46,6 @@ public class OfyHelper implements ServletContextListener {
 		ObjectifyService.register(KoferaService.class);
 		ObjectifyService.register(KoferaPackage.class);
 		ObjectifyService.register(KoferaSubscription.class);
-
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
