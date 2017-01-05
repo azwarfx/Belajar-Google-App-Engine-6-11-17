@@ -6,7 +6,6 @@ package com.kofera.app.web.entities;
 import java.util.Date;
 
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 /**

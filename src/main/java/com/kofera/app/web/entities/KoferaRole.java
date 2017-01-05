@@ -3,10 +3,7 @@
  */
 package com.kofera.app.web.entities;
 
-import java.util.Date;
-
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 
 /**
  * <p>
@@ -19,6 +16,7 @@ import com.googlecode.objectify.annotation.Id;
  * 
  * This class for @Entity KoferaRole
  * @author zulfikar@kofera.com
+ * @version 1.0
  */
 @Entity
 public class KoferaRole extends KoferaModel {
