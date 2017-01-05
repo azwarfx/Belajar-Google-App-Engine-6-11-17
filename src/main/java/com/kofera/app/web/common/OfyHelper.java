@@ -23,11 +23,8 @@ import com.example.guestbook.Greeting;
 import com.example.guestbook.Guestbook;
 import com.googlecode.objectify.ObjectifyService;
 import com.kofera.app.web.entities.KoferaAccount;
-<<<<<<< HEAD
 import com.kofera.app.web.entities.KoferaAuthGoogleAdwords;
-=======
 import com.kofera.app.web.entities.KoferaAccountRole;
->>>>>>> develop
 import com.kofera.app.web.entities.KoferaFeature;
 import com.kofera.app.web.entities.KoferaPackage;
 import com.kofera.app.web.entities.KoferaRole;
