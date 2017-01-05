@@ -22,10 +22,26 @@ public class KoferaAccountService extends KoferaModel{
 	/**
 	 * A convenience constructor
 	 */
-	public KoferaAccountService(Long koferaId, Long serviceId) {
+	public KoferaAccountService(Key<KoferaAccount> koferaId, Key<KoferaService> serviceId) {
 		super();
-		this.koferaId = Key.create(KoferaAccount.class, koferaId);
-		this.serviceId = Key.create(KoferaService.class, serviceId);
+		this.koferaId = koferaId;
+		this.serviceId = serviceId;
+	}
+
+	
+	/**
+	 * @param koferaId the koferaId to set
+	 */
+	public void setKoferaId(Key<KoferaAccount> koferaId) {
+		this.koferaId = koferaId;
+	}
+
+
+	/**
+	 * @param serviceId the serviceId to set
+	 */
+	public void setServiceId(Key<KoferaService> serviceId) {
+		this.serviceId = serviceId;
 	}
 
 	/**
@@ -41,13 +57,17 @@ public class KoferaAccountService extends KoferaModel{
 	public Key<KoferaService> getServiceId() {
 		return serviceId;
 	}
-
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("{id: ").append(id).append(", created: ").append(createdAt)
 		.append(", koferaId:").append(koferaId).append(", serviceId: ")
-		.append(serviceId).append("}");
+		.append(serviceId).append(", updateAt: ")
+		.append(updatedAt).append("}");
 		return builder.toString();
 	}
 }

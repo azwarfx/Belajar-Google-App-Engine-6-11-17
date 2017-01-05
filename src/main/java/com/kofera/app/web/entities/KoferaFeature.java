@@ -4,7 +4,6 @@
 package com.kofera.app.web.entities;
 
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 
 /**
  * 1. Ecommerce Dashboard

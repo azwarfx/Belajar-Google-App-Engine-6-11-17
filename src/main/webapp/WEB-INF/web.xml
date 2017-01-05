@@ -4,6 +4,20 @@
          xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
          version="2.5">
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-config/application-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
   <servlet>
     <servlet-name>HelloAppEngine</servlet-name>
     <servlet-class>com.kofera.app.web.HelloAppEngine</servlet-class>
@@ -66,6 +80,14 @@
   </servlet-mapping>
   
   <servlet>
+      <servlet-name>KoferaAuthGoogleAdwords</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAuthGoogleAdwordsTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAuthGoogleAdwords</servlet-name>
+      <url-pattern>/koferaauthgoogleadwords</url-pattern>
+  </servlet-mapping>
+  <servlet>
       <servlet-name>KoferaAccountSubscription</servlet-name>
       <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountSubscriptionTestServlet</servlet-class>
   </servlet>
@@ -98,7 +120,24 @@
       <servlet-name>KoferaAccountRole</servlet-name>
       <url-pattern>/koferaaccountrole</url-pattern>
   </servlet-mapping>
+    <servlet>
+      <servlet-name>KoferaAccountPayment</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAccountPaymentTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAccountPayment</servlet-name>
+      <url-pattern>/koferaaccountpayment</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
+      <servlet-name>KoferaAuthFacebook</servlet-name>
+      <servlet-class>com.kofera.app.web.controllers.test.KoferaAuthFacebookTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>KoferaAuthFacebook</servlet-name>
+      <url-pattern>/koferaauthfacebook</url-pattern>
+  </servlet-mapping>
+  <!--servlet>
 	  <servlet-name>sign</servlet-name>
 	  <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
 	</servlet>
@@ -110,7 +149,7 @@
 
 	<welcome-file-list>
     	<welcome-file>guestbook.jsp</welcome-file>
-	</welcome-file-list>
+	</welcome-file-list> -->
   <!-- <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list> -->
