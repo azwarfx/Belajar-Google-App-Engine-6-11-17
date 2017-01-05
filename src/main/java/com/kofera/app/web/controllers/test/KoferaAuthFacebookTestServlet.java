@@ -5,7 +5,6 @@ package com.kofera.app.web.controllers.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +34,7 @@ public class KoferaAuthFacebookTestServlet extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		out.println("Test for Entity KoferaAuthFacebook");
 		
-		KoferaAuthFacebook authFacebook = new KoferaAuthFacebook(10000L, 20000L, "examplerefreshtoken", "exampleaccesstoken", new Date());
+		KoferaAuthFacebook authFacebook = new KoferaAuthFacebook(10000L, 20000L, "examplerefreshtoken", "exampleaccesstoken");
 		//to save
 		ObjectifyService.ofy().save().entity(authFacebook).now();
 		

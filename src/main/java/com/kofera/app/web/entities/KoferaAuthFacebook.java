@@ -3,11 +3,10 @@
  */
 package com.kofera.app.web.entities;
 
-import java.util.Date;
-
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Parent;
 
 /**
@@ -19,24 +18,20 @@ import com.googlecode.objectify.annotation.Parent;
  */
 
 @Entity
-public class KoferaAuthFacebook {
-	@Id
+public class KoferaAuthFacebook extends KoferaModel{
+	@Index
 	Long accountId;
 	@Parent
 	Key<KoferaAccount> koferaId;
 	String refreshToken;
 	String accessToken;
-	Date createdAt;
-	Date updatedAt;
 
-	public KoferaAuthFacebook(Long accountId, Long koferaId, String refreshToken, String accessToken,
-			Date createdAt) {
+	public KoferaAuthFacebook(Long accountId, Long koferaId, String refreshToken, String accessToken) {
 		super();
 		this.accountId = accountId;
 		this.koferaId = Key.create(KoferaAccount.class, koferaId);
 		this.refreshToken = refreshToken;
 		this.accessToken = accessToken;
-		this.createdAt = new Date();
 	}
 
 	/**
@@ -83,75 +78,25 @@ public class KoferaAuthFacebook {
 		this.accessToken = accessToken;
 	}
 
-	/**
-	 * @return the createdAt
-	 */
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	/**
-	 * @param createdAt
-	 *            the createdAt to set
-	 */
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	/**
-	 * @param updatedAt
-	 *            the updatedAt to set
-	 */
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
-
-	/**
-	 * @return the updatedAt
-	 */
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("{accountId=");
+		builder.append("{accountId:");
 		builder.append(accountId);
-		builder.append(", koferaId=");
+		builder.append(", koferaId:");
 		builder.append(koferaId);
-		builder.append(", refreshToken=");
+		builder.append(", refreshToken:");
 		builder.append(refreshToken);
-		builder.append(", accessToken=");
+		builder.append(", accessToken:");
 		builder.append(accessToken);
-		builder.append(", createdAt=");
+		builder.append(", created:");
 		builder.append(createdAt);
 		builder.append("}");
 		return builder.toString();
 	}
-
-//	/*
-//	 * (non-Javadoc)
-//	 * 
-//	 * @see java.lang.Object#toString()
-//	 */
-//	@Override
-//	public String toString() {
-//		StringBuilder builder = new StringBuilder();
-//		builder.append("{accountId=");
-//		builder.append(accountId);
-//		builder.append(", koferaId=");
-//		builder.append(koferaId);
-//		builder.append(", refreshToken=");
-//		builder.append(refreshToken);
-//		builder.append(", accessToken=");
-//		builder.append(accessToken);
-//		builder.append("}");
-//		return builder.toString();
-//	}
 	
 	
 
