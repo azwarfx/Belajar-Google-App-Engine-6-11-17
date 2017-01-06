@@ -57,14 +57,12 @@ public class OfyHelper implements ServletContextListener {
 		ObjectifyService.register(KoferaAuthFacebook.class);
 		ObjectifyService.register(KoferaPackage.class);
 		ObjectifyService.register(KoferaSubscription.class);
-<<<<<<< HEAD
 		ObjectifyService.register(KoferaFeaturePermission.class); 
-=======
 		ObjectifyService.register(KoferaAccountSubscription.class);
 		ObjectifyService.register(KoferaAccountService.class);
 		ObjectifyService.register(KoferaPayment.class);
 		ObjectifyService.register(KoferaAccountPayment.class);
->>>>>>> f2e0a2a30dc12b823c5c028df5014bf13688a8c3
+
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
