@@ -1,4 +1,1 @@
-appengine-skeleton
-=============================
-
-This is a generated application from the appengine-skeleton archetype.
+# Belajar-Google-App-Engine-6-11-17
